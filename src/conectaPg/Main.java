@@ -15,28 +15,28 @@ public class Main {
       e.printStackTrace();
     }
     
-    TestaMetodosArmaDao.testaInsert();
-    TestaMetodosArmaDao.testaSelectTodos();
-    TestaMetodosArmaDao.testaUpdate();
-    TestaMetodosArmaDao.testaSelectTodos();
-    TestaMetodosArmaDao.testaDelete();
+    // TestaMetodosArmaDao.testaInsert();
+    // TestaMetodosArmaDao.testaSelectTodos();
+    // TestaMetodosArmaDao.testaUpdate();
+    // TestaMetodosArmaDao.testaSelectTodos();
+    // TestaMetodosArmaDao.testaDelete();
     
-    TestaMetodosUsuarioDao.testaInsert();
+    // TestaMetodosUsuarioDao.testaInsert();
     TestaMetodosUsuarioDao.testaSelectTodos();
-    TestaMetodosUsuarioDao.testaUpdate();
-    TestaMetodosUsuarioDao.testaSelectTodos();
-    TestaMetodosUsuarioDao.testaDelete();
+    // TestaMetodosUsuarioDao.testaUpdate();
+    // TestaMetodosUsuarioDao.testaSelectTodos();
+    // TestaMetodosUsuarioDao.testaDelete();
     
-    TestaMetodosArmaDao.testaInsert();
-    TestaMetodosUsuarioDao.testaInsert();
+    // TestaMetodosArmaDao.testaInsert();
+    // TestaMetodosUsuarioDao.testaInsert();
     
-    TestaVenda.testaInsert();
-    TestaVenda.testaSelectTodos();
-    TestaVenda.testaUpdate();
-    TestaVenda.testaSelectTodos();
-    TestaVenda.testaDelete();
+    // TestaVenda.testaInsert();
+    // TestaVenda.testaSelectTodos();
+    // TestaVenda.testaUpdate();
+    // TestaVenda.testaSelectTodos();
+    // TestaVenda.testaDelete();
     
-    TestaMetodosUsuarioDao.testaDelete();
-    TestaMetodosArmaDao.testaDelete();
+    // TestaMetodosUsuarioDao.testaDelete();
+    // TestaMetodosArmaDao.testaDelete();
   }
 }

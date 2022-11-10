@@ -20,16 +20,15 @@ public class UsuarioDao {
     }
 
     public void adicionarUsuario(Usuario usuario){
-        String sql = "INSERT INTO Usuario(id,nome,cpf,dataNascimento,email,telefone) VALUES (?, ?, ?, ?, ?, ?);";
+        String sql = "INSERT INTO Usuario(id,nome,cpf,email,telefone) VALUES (?, ?, ?, ?, ?);";
 
         try{
             PreparedStatement preparador = con.prepareStatement(sql);
             preparador.setInt(1, usuario.getId());
             preparador.setString(2, usuario.getNome());
             preparador.setString(3, usuario.getCpf());
-            preparador.setDate(4, new java.sql.Date( usuario.getdataNascimento().getTime()));
-            preparador.setString(5, usuario.getEmail());
-            preparador.setString(6, usuario.getTelefone());
+            preparador.setString(4, usuario.getEmail());
+            preparador.setString(5, usuario.getTelefone());
             preparador.execute();
             preparador.close();
             System.out.println("Insercao realizada!");
@@ -85,7 +84,6 @@ public class UsuarioDao {
                 usuario.setId(resultados.getInt("id"));
                 usuario.setNome(resultados.getString("nome"));
                 usuario.setCpf(resultados.getString("cpf"));
-                usuario.setDataNascimento(resultados.getDate("dataNascimento"));
                 usuario.setEmail(resultados.getString("email"));
                 usuario.setTelefone(resultados.getString("telefone"));
 

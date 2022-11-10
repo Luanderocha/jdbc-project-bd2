@@ -8,7 +8,6 @@ public class Usuario {
     private Integer id;
     private String nome;
     private String cpf;
-    private Date dataNascimento;
     private String email;
     private String telefone;
 
@@ -18,13 +17,6 @@ public class Usuario {
     }
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public Date getdataNascimento() {
-        return dataNascimento;
-    }
-    public void setDataNascimento(Date dataNascimento) {
-        this.dataNascimento = dataNascimento;
     }
 
     public String getNome() {

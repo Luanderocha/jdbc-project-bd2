@@ -31,8 +31,7 @@ public class TestaMetodosUsuarioDao {
         Usuario usuario1 = new Usuario();
         usuario1.setId(1);
         usuario1.setNome("Luan");
-        usuario1.setCpf("123.456.789-00");
-        usuario1.setDataNascimento(new Date());
+        usuario1.setCpf("12345678900");
         usuario1.setEmail("luan@teste.com");
         usuario1.setTelefone("83999887766");
 
@@ -88,7 +87,6 @@ public class TestaMetodosUsuarioDao {
             System.out.println("O id é: "+ usuario.getId()+
                     " Nome: "+ usuario.getNome()+
                     " Cpf: "+ usuario.getCpf()+
-                    " Data de Nascimento: "+ usuario.getdataNascimento()+
                     " Email: "+ usuario.getEmail() +
                     " Telefone: "+ usuario.getTelefone());
 
