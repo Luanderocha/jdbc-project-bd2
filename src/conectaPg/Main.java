@@ -22,7 +22,7 @@ public class Main {
     // TestaMetodosArmaDao.testaDelete();
     
     // TestaMetodosUsuarioDao.testaInsert();
-    TestaMetodosUsuarioDao.testaSelectTodos();
+    // TestaMetodosUsuarioDao.testaSelectTodos();
     // TestaMetodosUsuarioDao.testaUpdate();
     // TestaMetodosUsuarioDao.testaSelectTodos();
     // TestaMetodosUsuarioDao.testaDelete();

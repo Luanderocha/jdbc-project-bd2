@@ -9,6 +9,8 @@ import dao.ArmaDao;
 import dao.UsuarioDao;
 import dao.VendaDAO;
 
+import java.util.Date;
+
 public class App {
     public static void main(String[] args) throws Exception {
 
@@ -155,7 +157,46 @@ public class App {
                     }
                     break;
                 case 3:
-                    // vendaDao = new VendaDAO();
+                    if (opcao == 1) {
+                        System.out.println("Digite o id da venda");
+                        int id = ler.nextInt();
+                        venda.setId(id);
+                        System.out.println("Digite o número de série da venda");
+                        int numSerie = ler.nextInt();
+                        venda.setNumeroDeSerieArma(numSerie);
+                        System.out.println("Digite o id do vendedor");
+                        int idUsuario = ler.nextInt();
+                        venda.setIdUsuario(idUsuario);
+                        System.out.println("Digite a nota fiscal");
+                        int nota = ler.nextInt();
+                        venda.setNotaFiscal(nota);
+                        venda.setDataVenda(new Date());
+                        vendaDao.adicionarVenda(venda);
+                    } else if (opcao == 2) {
+                        List<Venda> listaResultado = vendaDao.selectTodos();
+                        for (Venda v : listaResultado) {
+                            System.out.println("id: " + v.getId() + " numeroDeSerieArma: " + v.getNumeroDeSerieArma()
+                                    + " idUsuario: "
+                                    + v.getIdUsuario() + " notaFiscal: " + v.getNotaFiscal() + " dataVenda: "
+                                    + v.getDataVenda());
+
+                        }
+                    } else if (opcao == 3) {
+                        System.out.println("Digite o Número de série que será atualizada");
+                        int numSerie = ler.nextInt();
+                        venda.setNumeroDeSerieArma(numSerie);
+                        System.out.println("Digite a nota fical que será atualizada");
+                        int notaFiscal = ler.nextInt();
+                        venda.setNotaFiscal(notaFiscal);
+                        vendaDao.updateVenda(venda);
+                    } else if (opcao == 4) {
+                        System.out.println("Digite o id do usuário");
+                        int id = ler.nextInt();
+                        venda.setId(id);
+                        vendaDao.deleteVenda(venda);
+                    } else {
+                        System.out.println("Número incorreto , digite novamente");
+                    }
                     break;
             }
             System.out
