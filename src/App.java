@@ -94,6 +94,9 @@ public class App {
                         System.out.println("Digite o valor para atualizar");
                         int valor = ler.nextInt();
                         arma.setValor(valor);
+                        System.out.println("adicione itens ao estoque");
+                        int qtd = ler.nextInt();
+                        arma.setEstoque(qtd);
                         armaDao.updateArma(arma);
                     } else if (opcao == 4) {
                         System.out.println("Digite o número de série");
@@ -190,7 +193,7 @@ public class App {
                         venda.setNotaFiscal(notaFiscal);
                         vendaDao.updateVenda(venda);
                     } else if (opcao == 4) {
-                        System.out.println("Digite o id do usuário");
+                        System.out.println("Digite o id da venda");
                         int id = ler.nextInt();
                         venda.setId(id);
                         vendaDao.deleteVenda(venda);

@@ -56,7 +56,7 @@ public class VendaDAO {
 		String sql = "DELETE FROM Venda WHERE id = ?";
 		try {
 			PreparedStatement preparador = con.prepareStatement(sql);
-			preparador.setInt(1, venda.getIdUsuario());
+			preparador.setInt(1, venda.getId());
 			preparador.execute();
 			preparador.close();
 			System.out.println("Deleção realizada!");

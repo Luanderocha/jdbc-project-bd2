@@ -38,12 +38,13 @@ public class ArmaDao {
 	}
 	
 	public void updateArma(Arma arma) {
-		String sql = "UPDATE Arma SET valor = ? WHERE numeroDeSerie = ?";
+		String sql = "UPDATE Arma SET valor = ? , estoque = ? WHERE numeroDeSerie = ?";
 		
 		try {
 			PreparedStatement preparador = con.prepareStatement(sql);
 			preparador.setFloat(1, arma.getValor());
-			preparador.setInt(2, arma.getNumeroDeSerie());
+			preparador.setInt(2, arma.getEstoque());
+			preparador.setInt(3, arma.getNumeroDeSerie());
 			preparador.execute();
 			preparador.close();
 			System.out.println("Atualização realizada!");
